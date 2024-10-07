@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar over Background Image</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link src="./styles.css" rel="stylesheet">
+    <style>
+        .card {
+            position: relative;
+        }
+
+        .card-img-top {
+            transition: 0.5s ease;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Semi-transparent background */
+            color: white;
+            opacity: 0;
+            transition: 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card:hover .card-img-top {
+            opacity: 0.3;
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .background-image {
+            background-image: url('https://img.freepik.com/free-photo/smart-microchip-technology-background-gradient-blue_53876-124652.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1728172800&semt=ais_hybrid');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* Full viewport height */
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Image Container -->
+    <div class="background-image">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white fs-1" href="#">DIGITAL AGENCY</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-white" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-white">
+                        <li class="nav-item">
+                            <a class="text-white nav-link active fs-3" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-3" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-3" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-3" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-3">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="border-color-white btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content inside the background -->
+        <div class="text-start text-white"
+            style="position: absolute; top: 50%; left: 20%; transform: translate(-50%, -50%);">
+            <h1>We Are A Digital Agency</h1>
+            <a href="#" class="btn btn-primary">Getting Started</a>
+            <hr style="width: 30px;color:white;">
+        </div>
+    </div>
+    <hr class="bg-dark">
+    <!-- services -->
+    <div class="services h-25 w-100 bg-dark">
+        <h3 class=" text-primary">Services.</h3>
+        <br>
+        <p class="text-white">we work with you not for you</p>
+        <!-- img group -->
+
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-vector/social-tree-concept-illustration_114360-4898.jpg?t=st=1723973245~exp=1723976845~hmac=7a55f4889b6c53d1b92be3ac9a8fb2a4f6f3fbbac8ac0431f50e89b80205d8f1&w=740"
+                            class="card-img-top" alt="Image 1">
+                        <div class="card-overlay">
+                            <h5 class="Social Media">Card Title 1</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg?t=st=1723973141~exp=1723976741~hmac=9fb3a0919e6beef1b77206045e25629ccd7437c9cf1cd1a388536fc07bfc4373&w=996"
+                            class="card-img-top" alt="Image 2">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Design</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-photo/online-strategy-media-marketing-icons_53876-167094.jpg?t=st=1723973490~exp=1723977090~hmac=ea1916481191c752ec439ff4680d7305693e7f3aa5aae7c6e86ade694bee56e2&w=740"
+                            class="card-img-top" alt="Image 3">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Marketing</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-vector/design-concept-illustration-idea-style-creativity-projects_613284-3229.jpg?t=st=1723973900~exp=1723977500~hmac=7b63340ae0e6ab28dcdeb393079d20aad32229aa60b02ec40d7d310b7cd3b12b&w=1380"
+                            class="card-img-top" alt="Image 4">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Design</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-vector/social-tree-concept-illustration_114360-4898.jpg?t=st=1723973245~exp=1723976845~hmac=7a55f4889b6c53d1b92be3ac9a8fb2a4f6f3fbbac8ac0431f50e89b80205d8f1&w=740"
+                            class="card-img-top" alt="Image 1">
+                        <div class="card-overlay">
+                            <h5 class="Social Media">Card Title 1</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg?t=st=1723973141~exp=1723976741~hmac=9fb3a0919e6beef1b77206045e25629ccd7437c9cf1cd1a388536fc07bfc4373&w=996"
+                            class="card-img-top" alt="Image 2">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Design</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-photo/online-strategy-media-marketing-icons_53876-167094.jpg?t=st=1723973490~exp=1723977090~hmac=ea1916481191c752ec439ff4680d7305693e7f3aa5aae7c6e86ade694bee56e2&w=740"
+                            class="card-img-top" alt="Image 3">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Marketing</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/free-vector/design-concept-illustration-idea-style-creativity-projects_613284-3229.jpg?t=st=1723973900~exp=1723977500~hmac=7b63340ae0e6ab28dcdeb393079d20aad32229aa60b02ec40d7d310b7cd3b12b&w=1380"
+                            class="card-img-top" alt="Image 4">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Design</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="bg-dark">
+    <!-- works -->
+    <div class="works h-25 w-100 bg-dark">
+        <h3 class=" text-primary">Works.</h3>
+        <br>
+        <p class="text-white">Things we made</p>
+            <div class="row gx-40 p-5">
+                <div class="col-4">
+                    <img class="h-100 w-75 img-responsive" src="https://img.freepik.com/free-photo/butterfly-plant_23-2150636323.jpg?t=st=1724042246~exp=1724045846~hmac=17145c03e59d215b81ce9f5940626e58f99c690cff9d53e9cdecadd94996c44f&w=996" alt="i1">
+                </div>
+                <div class="col-4">
+                    <img class="h-100 w-75 img-responsive" src="https://img.freepik.com/free-photo/butterfly-plant_23-2150636323.jpg?t=st=1724042246~exp=1724045846~hmac=17145c03e59d215b81ce9f5940626e58f99c690cff9d53e9cdecadd94996c44f&w=996" alt="i1">
+                </div>
+                <div class="col-4">
+                    <img class="h-100 w-75 img-responsive" src="https://img.freepik.com/free-photo/butterfly-plant_23-2150636323.jpg?t=st=1724042246~exp=1724045846~hmac=17145c03e59d215b81ce9f5940626e58f99c690cff9d53e9cdecadd94996c44f&w=996" alt="i1">
+                </div>
+            </div>
+            <hr>
+    </div>
+    <!-- about us -->
+    <div class="works bg-dark">
+        <h3 class=" text-primary">About Us</h3>
+        <br>
+        <p class="text-white">All You Need TO Know About Us</p>
+            <div class="row">
+                <div class="col-6"> 
+                        <img class="h-75 w-75 img-responsive" src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241261.jpg?t=st=1724043296~exp=1724046896~hmac=7326a8fbbf30713a613e7455386e88058cb1200bb8111bed8a9e5f47419c5096&w=996">
+                        <br><br>
+                        <a href="#" class="btn btn-primary">Getting Started</a>
+                   </div>
+                   <div class="col-6"> 
+                    <div class="row">
+                      <div class="col-6">
+                         <img class="w-50 h-50" src=" https://img.freepik.com/free-photo/people-creating-new-project_23-2147656719.jpg?t=st=1724043632~exp=1724047232~hmac=2b1f03e8ef582ed247c11e2c0329d5d2cf79ccccdf511e59c6ff9a02bcd952e3&w=996">
+                         <h5 class="text-primary">Works</h5>
+                         <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nihil labore exercitationem id error, hic aut rem vero? Illum quam, cumque repellat ea voluptatibus illo esse commodi deleniti qui libero.</p>
+                        </div>
+                        <div class="col-6">
+                            <img class="w-50 h-50" src=" https://img.freepik.com/free-photo/people-creating-new-project_23-2147656719.jpg?t=st=1724043632~exp=1724047232~hmac=2b1f03e8ef582ed247c11e2c0329d5d2cf79ccccdf511e59c6ff9a02bcd952e3&w=996">
+                            <h5 class="text-primary">Works</h5>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nihil labore exercitationem id error, hic aut rem vero? Illum quam, cumque repellat ea voluptatibus illo esse commodi deleniti qui libero.</p>
+                           </div>
+                      <!-- <div class="col-6 w-25"> <img src=" https://img.freepik.com/free-photo/people-creating-new-project_23-2147656719.jpg?t=st=1724043632~exp=1724047232~hmac=2b1f03e8ef582ed247c11e2c0329d5d2cf79ccccdf511e59c6ff9a02bcd952e3&w=996"></div> -->
+                    </div>
+                   </div>
+                <!-- <div class="col-6">
+                    <img class="h-100 w-75 img-responsive" src="https://img.freepik.com/free-photo/butterfly-plant_23-2150636323.jpg?t=st=1724042246~exp=1724045846~hmac=17145c03e59d215b81ce9f5940626e58f99c690cff9d53e9cdecadd94996c44f&w=996" alt="i1">
+                </div> -->
+            </div>
+            <hr>
+    </div>
+    <!-- client -->
+    <div class="works bg-dark">
+        <h3 class=" text-primary">Client</h3>
+        <br>
+            <div class="row">
+                <div class="col-6"> 
+                        <img class="h-75 w-75 img-responsive" src="https://img.freepik.com/free-photo/businessman-posing-smiling_144627-34937.jpg?t=st=1724045255~exp=1724048855~hmac=bdb917081ea13cc3d869fa7af3b5e48e0ed72a7e00121ccc75b5347a6da4ee0a&w=360">
+                        <br><br>
+                   </div>
+                   <div class="col-6"> 
+                    <h3 class=" text-primary">What are our client say</h3>
+                    <br><br>
+                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sit repellendus ea perferendis ipsa deleniti quaerat quibusdam, adipisci numquam, cumque suscipit ex modi ipsam sed aperiam libero nisi! Sint, laborum.
+                    Commodi quam fuga ducimus autem deleniti voluptate perspiciatis veniam maiores officia voluptates quaerat placeat sequi esse odio saepe doloribus magni, numquam quas libero consectetur aperiam cumque et! Quasi, minima quos.</p>
+                    <br>
+                    <h3 class=" text-primary">John Burgers</h3>
+                    <h5 class=" text-primary">california</h5>
+                    <h5 class=" text-primary">USA</h5>
+                    </div>
+                   </div>
+                <!-- <div class="col-6">
+                    <img class="h-100 w-75 img-responsive" src="https://img.freepik.com/free-photo/butterfly-plant_23-2150636323.jpg?t=st=1724042246~exp=1724045846~hmac=17145c03e59d215b81ce9f5940626e58f99c690cff9d53e9cdecadd94996c44f&w=996" alt="i1">
+                </div> -->
+            </div>
+          
+    </div>
+    <hr>
+    <!-- footer -->
+     <div class="footer row bg-dark">
+        <div class="col-3"> 
+            <h5 class=" text-primary">About Us</h5>
+            <p class=" text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus voluptates officia, quibusdam ex earum sapiente fuga nobis neque voluptas corrupti accusantium animi possimus vero minima velit ipsam natus nemo!</p>
+        </div>
+        <div class="col-3"> 
+            <h5 class=" text-primary">Our Company</h5>
+            <ul class="text-decoration-none text-white">
+                <li>Our Mission</li>
+                <li>Our Vision</li>
+                <li>Our Vaues</li>
+            </ul>
+        </div>
+        <div class="col-3"> 
+            <h5 class=" text-primary">Connections</h5>
+            <ul class="text-decoration-none text-white">
+                <li>Our Mission</li>
+                <li>Our Vision</li>
+                <li>Our Vaues</li>
+            </ul>
+        </div>
+        <div class="col-3"> 
+            <h5 class=" text-primary">Social Media</h5>
+            <div class="row">
+                <
+            </div>
+        </div>
+     </div>
+     <p class="text-center row bg-dark text-white">© DIGITAL AGENCY. All rights reserved.</p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<script src=
